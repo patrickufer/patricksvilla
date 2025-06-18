@@ -1,3 +1,8 @@
+---
+layout: ../layouts/MarkdownPageLayout.astro
+title: Availability
+---
+
 # PatricksVilla Haines City & Cape Coral
 
 ## Availability

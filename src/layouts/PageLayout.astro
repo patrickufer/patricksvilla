@@ -1,0 +1,45 @@
+---
+import Header from "../components/Header.astro";
+
+interface Props {
+  // Define frontmatter props here
+  title: string;
+  author: string;
+  date: string;
+}
+
+const { title, author, date } = Astro.props;
+---
+
+<html>
+  <head>
+    <!-- Add other Head elements here, like styles and meta tags. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>PatricksVilla | {title}</title>
+    <link rel="icon" type="image/png" href="/patricksvilla/favicon.png" />
+  </head>
+  <body>
+    <!-- Add other UI components here, like common headers and footers. -->
+
+    <Header />
+    <!-- 2. Rendered HTML will be passed into the default slot. -->
+    <slot />
+    <p>Written on: {date}</p>
+  </body>
+</html>
+<style>
+  body {
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+    width: 980px;
+  }
+  img {
+    width: 400px;
+    height: auto;
+    object-fit: scale-down;
+  }
+  p:has(img) {
+    text-align: center;
+  }
+</style>

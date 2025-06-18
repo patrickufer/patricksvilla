@@ -1,5 +1,6 @@
 ---
-title: Cape Coral
+layout: ../../layouts/MarkdownPageLayout.astro
+title: Cape Coral | Villa
 ---
 
 # PatricksVilla Cape Coral

@@ -1,20 +1,7 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import PageLayout from '../layouts/PageLayout.astro';
 ---
 
-<html>
-  <head>
-    <title>My Page Title</title>
-    <link rel="icon" type="image/png" href="/patricksvilla/favicon.png">
-  </head>
-  <body>
-    <h1>www.PatricksVilla.com</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+<PageLayout title="Home" author="Patrick" date="01/01/2025">
+  <p>Some page content</p>
+</PageLayout>
