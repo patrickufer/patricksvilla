@@ -1,0 +1,23 @@
+{
+  "name": "patricksvilla",
+  "version": "1.0.0",
+  "description": "patricksvilla.com website",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickufer/patricksvilla.git"
+  },
+  "author": "Patrick Ufer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickufer/patricksvilla/issues"
+  },
+  "homepage": "https://github.com/patrickufer/patricksvilla#readme",
+  "dependencies": {
+    "astro": "^5.9.4"
+  }
+}
