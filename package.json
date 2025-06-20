@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/patrickufer/patricksvilla#readme",
   "dependencies": {
-    "astro": "^5.9.4"
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.9.4",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^4.1.10"
   }
 }

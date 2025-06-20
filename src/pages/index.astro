@@ -1,7 +1,90 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import Card from "../components/Card.astro";
+import "../styles/global.css";
+import hcVillaImage from "../images/hc-front.jpeg";
+import hcPoolImage from "../images/hc-pool.jpeg";
+import ccVillaImage from "../images/cc-front.jpeg";
+import ccPoolImage from "../images/cc-pool.jpeg";
 ---
 
-<PageLayout title="Home" author="Patrick" date="01/01/2025">
-  <p>Some page content</p>
-</PageLayout>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>PatricksVilla</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body class="bg-gray-50 mx-8 pb-8">
+    <nav class="pt-8 pb-8 flex justify-center">
+      <ul class="flex space-x-4">
+        <li>
+          <a
+            href="#availability"
+            class="px-5 py-2 rounded-full border-2 border-[#009] text-[#009] font-semibold hover:bg-[#009] hover:text-white transition-colors"
+          >
+            Availability
+          </a>
+        </li>
+        <li>
+          <a
+            href="#book"
+            class="px-5 py-2 rounded-full border-2 border-[#009] text-[#009] font-semibold hover:bg-[#009] hover:text-white transition-colors"
+          >
+            Book Now
+          </a>
+        </li>
+        <li>
+          <a
+            href="#guestbook"
+            class="px-5 py-2 rounded-full border-2 border-[#009] text-[#009] font-semibold hover:bg-[#009] hover:text-white transition-colors"
+          >
+            Guestbook
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header class="mb-8">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 text-center">
+        Welcome to <span class="text-[#009]">PatricksVilla</span>
+      </h1>
+    </header>
+    <div class="flex flex-col items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-250">
+        <Card
+          topImg={hcVillaImage}
+          bottomImg={hcPoolImage}
+          title="Haines City (Orlando)"
+          icons={[
+            { icon: "person", label: "Sleeps 8" },
+            { icon: "bed", label: "4 Bedrooms" },
+            { icon: "shower", label: "3 Bathrooms" },
+            { icon: "pool", label: "Private Pool" },
+          ]}
+          bullets={[
+            "Spacious villa with modern amenities",
+            "Located on Golf Course",
+            "Close to Disney and Universal Theme Parks",
+          ]}
+          buttonUrl="haines-city/villa"
+        />
+        <Card
+          topImg={ccVillaImage}
+          bottomImg={ccPoolImage}
+          title="Cape Coral (Fort Myers)"
+          icons={[
+            { icon: "person", label: "Sleeps 6" },
+            { icon: "bed", label: "3 Bedrooms" },
+            { icon: "shower", label: "3 Bathrooms" },
+            { icon: "pool", label: "Private Pool and Spa" },
+          ]}
+          bullets={[
+            "Beautiful waterfront property",
+            "Perfect for family vacations",
+            "Near beaches and shopping areas",
+          ]}
+          buttonUrl="cape-coral/villa"
+        />
+      </div>
+    </div>
+  </body>
+</html>

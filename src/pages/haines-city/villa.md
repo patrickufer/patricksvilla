@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPageLayout.astro
-title: Cape Coral | Villa
+title: Haines City | Villa
 ---
 
-# PatricksVilla Cape Coral
+# PatricksVilla Haines City
 
 ## Die Villa
 
