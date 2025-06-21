@@ -12,4 +12,13 @@ export default defineConfig({
   },
 
   integrations: [icon()],
+
+  i18n: {
+    locales: ["en", "de"], // Locales you want to support
+    defaultLocale: "en", // Default locale (fallback),
+
+    routing: {
+      prefixDefaultLocale: true, // Ensures that your default locale is prefixed aswell
+    },
+  },
 });
