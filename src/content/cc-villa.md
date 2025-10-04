@@ -1,8 +1,3 @@
----
-layout: ../../../layouts/MarkdownBase.astro
-title: Cape Coral | Villa
----
-
 # PatricksVilla Cape Coral
 
 ## Die Villa

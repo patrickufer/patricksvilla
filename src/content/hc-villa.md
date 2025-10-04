@@ -1,8 +1,3 @@
----
-layout: ../../../layouts/MarkdownBase.astro
-title: Haines City | Villa
----
-
 # PatricksVilla Haines City
 
 ## Die Villa

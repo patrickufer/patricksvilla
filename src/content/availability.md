@@ -1,8 +1,3 @@
----
-layout: ../layouts/MarkdownBase.astro
-title: Availability
----
-
 # PatricksVilla Haines City & Cape Coral
 
 ## Availability
