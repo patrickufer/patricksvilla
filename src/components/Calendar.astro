@@ -1,0 +1,96 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const currentYear = new Date().getFullYear();
+
+// Example: unavailable date ranges (each range is { start: "YYYY-MM-DD", end: "YYYY-MM-DD" })
+const unavailableDateRanges = [{ start: `2025-10-22`, end: `2025-12-12` }];
+
+// Helper to check if a date is within any unavailable range
+function isDateUnavailable(dateStr) {
+  const date = new Date(dateStr);
+  return unavailableDateRanges.some(({ start, end }) => {
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    return date >= startDate && date <= endDate;
+  });
+}
+
+// Helper to get days in a month
+function getDaysInMonth(year, month) {
+  return new Date(year, month + 1, 0).getDate();
+}
+
+// Helper to format date as YYYY-MM-DD
+function formatDate(year, month, day) {
+  return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+const months = [];
+const now = new Date();
+for (let i = 0; i < 24; i++) {
+  const date = new Date(now.getFullYear(), now.getMonth() + i, 1);
+  months.push(date);
+}
+---
+
+<div class="flex items-center gap-4 mb-6">
+  <div class="flex items-center gap-2">
+    <span
+      class="h-8 w-10 rounded bg-gray-300 border border-gray-500 inline-block"
+    ></span>
+    <span>{t("availability.unavailable")}</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <span class="h-8 w-10 rounded bg-green-600 inline-block"></span>
+    <span class="text-green-700 font-semibold"
+      >{t("availability.available")}</span
+    >
+  </div>
+</div>
+<div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    months.map((month, monthIdx) => {
+      const daysInMonth = getDaysInMonth(currentYear, monthIdx);
+      const firstDay = new Date(currentYear, monthIdx, 1).getDay(); // 0 (Sun) - 6 (Sat)
+      const blanks = Array(firstDay).fill(null);
+      const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+      const allCells = [...blanks, ...days];
+      return (
+        <div class="border border-gray-300 p-4 rounded-lg shadow-sm bg-white">
+          <div class="font-bold mb-2 text-lg">
+            {`${month.toLocaleString("default", { month: "long" })} ${month.getFullYear()}`}
+          </div>
+          <div class="grid grid-cols-7 mb-1 text-sm text-gray-500 text-center">
+            <>
+              <span>Sun</span>
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+            </>
+          </div>
+          <div class="grid grid-cols-7 gap-1">
+            {allCells.map((day, idx) => {
+              if (day === null) return <span class="h-8 w-10" />;
+              const dateStr = formatDate(currentYear, monthIdx, day);
+              const isUnavailable = isDateUnavailable(dateStr);
+              return (
+                <span
+                  class={`h-8 flex items-center justify-center rounded text-center text-base ${isUnavailable ? "bg-gray-300" : "bg-green-600 text-white font-semibold"}`}
+                >
+                  {day}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })
+  }
+</div>

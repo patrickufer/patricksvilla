@@ -26,6 +26,8 @@ export const ui = {
     "home.cc.description.1": "Beautiful waterfront property",
     "home.cc.description.2": "Located in a quiet neighborhood",
     "home.cc.description.3": "Near beaches and shopping",
+    "availability.unavailable": "Unavailable",
+    "availability.available": "Available",
   },
   de: {
     "nav.availability": "Verfügbarkeit",
@@ -49,5 +51,7 @@ export const ui = {
     "home.cc.description.2": "In einer ruhigen Nachbarschaft gelegen",
     "home.cc.description.3":
       "In der Nähe von Stränden und Einkaufsmöglichkeiten",
+    "availability.unavailable": "Nicht verfügbar",
+    "availability.available": "Verfügbar",
   },
 } as const;
