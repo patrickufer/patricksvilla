@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPageLayout.astro
+layout: ../../../layouts/MarkdownBase.astro
 title: Cape Coral | Villa
 ---
 

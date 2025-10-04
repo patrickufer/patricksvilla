@@ -1,0 +1,61 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  return [{ params: { locale: "en" } }, { params: { locale: "de" } }];
+}
+---
+
+<nav class="pt-8 pb-8 flex justify-center">
+  <ul class="flex space-x-4 justify-center items-center">
+    <li>
+      <a
+        href={getRelativeLocaleUrl(lang, "availability")}
+        class="px-5 py-2 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors"
+      >
+        {t("nav.availability")}
+      </a>
+    </li>
+    <li>
+      <a
+        href={getRelativeLocaleUrl(lang, "contact")}
+        class="px-5 py-2 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors"
+      >
+        {t("nav.contact")}
+      </a>
+    </li>
+    <li>
+      <a
+        href={getRelativeLocaleUrl(lang, "guestbook")}
+        class="px-5 py-2 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors"
+      >
+        {t("nav.guestbook")}
+      </a>
+    </li>
+    <li>
+      <a
+        href={getRelativeLocaleUrl(
+          lang === "en" ? "de" : "en",
+          Astro.url.pathname.replace(/^\/[^/]+/, "")
+        )}
+        class="px-5 py-2 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white"
+        aria-label=`${lang === "en" ? "Switch to German" : "Switch to English"}`
+      >
+        {lang === "en" ? "🇩🇪" : "🇺🇸"}
+      </a>
+    </li>
+  </ul>
+</nav>
+<header class="mb-8 text-center">
+  <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-2">
+    {t("nav.title")}
+    <a href={getRelativeLocaleUrl(lang)} class="text-primary hover:underline">
+      PatricksVilla
+    </a>
+  </h1>
+  <p>{t("nav.subtitle")}</p>
+</header>

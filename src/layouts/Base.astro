@@ -1,0 +1,20 @@
+---
+import Nav from "./Nav.astro";
+import { getLangFromUrl } from "../i18n/utils";
+import "../styles/global.css";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<html lang={lang}>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>PatricksVilla</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body class="bg-gray-50 mx-8 pb-8">
+    <Nav />
+    <slot />
+  </body>
+</html>
