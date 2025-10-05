@@ -1,6 +1,7 @@
 ---
 import Base from "@layouts/Base.astro";
 import { Content } from "@content/hc-villa.md";
+import Prose from "@components/Prose.astro";
 
 export async function getStaticPaths() {
   return [{ params: { locale: "en" } }, { params: { locale: "de" } }];
@@ -8,7 +9,9 @@ export async function getStaticPaths() {
 ---
 
 <Base>
-  <div class="container mx-auto px-4 markdown-content">
-    <Content />
+  <div class="flex justify-center">
+    <Prose>
+      <Content />
+    </Prose>
   </div>
 </Base>

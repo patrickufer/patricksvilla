@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./markdown.css";
+@plugin '@tailwindcss/typography';
 
 @theme {
   --color-primary: #009;
