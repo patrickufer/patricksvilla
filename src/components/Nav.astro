@@ -79,7 +79,8 @@ const t = useTranslations(lang);
               {t("nav.contact")}
             </a>
             <a
-              href={getRelativeLocaleUrl(lang, "guestbook")}
+              href="https://users.smartgb.com/g/g.php?a=s&i=g18-42519-4b&m=all&p=1"
+              target="_blank"
               class={`px-5 py-2 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors ${
                 Astro.url.pathname.endsWith("/guestbook/") &&
                 "bg-primary text-white"
@@ -126,7 +127,8 @@ const t = useTranslations(lang);
         >{t("nav.contact")}</a
       >
       <a
-        href={getRelativeLocaleUrl(lang, "guestbook")}
+        href="https://users.smartgb.com/g/g.php?a=s&i=g18-42519-4b&m=all&p=1"
+        target="_blank"
         class=`block rounded-md px-3 py-2 text-primary hover:bg-primary hover:text-white hover:transition-colors ${
           Astro.url.pathname.endsWith("/guestbook/") &&
           "bg-primary text-white"
