@@ -6,7 +6,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 // Helper to check if a date is within any unavailable range
-function isDateUnavailable(dateStr) {
+function isDateUnavailable(dateStr: string) {
   const date = new Date(dateStr);
   return bookings.some(({ start, end }) => {
     const startDate = new Date(start);
@@ -16,12 +16,12 @@ function isDateUnavailable(dateStr) {
 }
 
 // Helper to get days in a month
-function getDaysInMonth(year, month) {
+function getDaysInMonth(year: number, month: number) {
   return new Date(year, month + 1, 0).getDate();
 }
 
 // Helper to format date as YYYY-MM-DD
-function formatDate(year, month, day) {
+function formatDate(year: number, month: number, day: number) {
   return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
