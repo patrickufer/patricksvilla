@@ -1,6 +1,6 @@
-# PatricksVilla Haines City
+## PatricksVilla Haines City
 
-## Die Villa
+### Die Villa
 
 PatricksVilla is nestled in a quiet cul de sac on the gated community of Southern Dunes Golf and Country Club. The south facing pool side of the house overlooks the 12th fairway and unlike many other vacation homes our villa has got no immediate neighbors a fact that guarantees your well deserved privacy.
 
