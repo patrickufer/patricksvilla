@@ -1,6 +1,8 @@
-# PatricksVilla Cape Coral
+![CC Villa](../images/cc-villa.jpeg)
 
-## Die Villa
+## PatricksVilla Cape Coral
+
+### Die Villa
 
 PatricksVilla in Cape Coral, Florida, wurde im Jahr 2024 fertiggestellt und bietet dem anspruchsvollen Urlauber weit mehr, als nur eine normale Ferienunterkunft.
 
@@ -29,7 +31,7 @@ Ein wichtiger Aspekt Ihres Urlaubs ist die Sauberkeit Ihres Ferienhauses. Patric
 
 Wir, die deutschen Besitzer kümmern und immer persönlich um unsere Gäste, Sie sprechen nie mit einer Vermietagentur.
 
-![Canal Sunset](../../images/canal-sunset.jpeg)
+![Canal Sunset](../images/canal-sunset.jpeg)
 
 ### Warum Cape Coral?
 
@@ -75,8 +77,8 @@ Die Sicherheit unserer Gäste ist uns natürlich genauso wichtig, wie die Erholu
 
 Auf Wunsch installieren wir Ihnen den Pool-Sicherheitszaun (Foto). Dieser wird zwischen Pool und den Terassentüren im Wohnzimmer und dem Elternschlafzimmer installiert und bewirkt, dass Kinder keinen uneingeschränkten Zugang zum Pool haben.
 
-![Security Fence](../../images/sec-fence.jpeg)
-![Security Fence 2](../../images/sec-fence2.jpeg)
+![Security Fence](../images/sec-fence.jpeg)
+![Security Fence 2](../images/sec-fence2.jpeg)
 
 Die Terassentüren vom Schlafzimmer 2 werden nicht von dem Sicherheitszaun abgedeckt und sind daher mit zwei unabhängigen „Tür AUF/ZU Alarmen“ ausgestattet.
 
