@@ -8,7 +8,7 @@ export const defaultLang = "en";
 export const ui = {
   en: {
     "nav.availability": "Availability",
-    "nav.contact": "Contact Us",
+    "nav.contact": "Contact",
     "nav.guestbook": "Guestbook",
     "nav.title": "Welcome to ",
     "nav.subtitle": "Luxury Vacation Homes • Florida, USA",
