@@ -1,11 +1,11 @@
 ---
-import Base from "../../layouts/Base.astro";
-import Card from "../../components/Card.astro";
-import hcVillaImage from "../../images/hc-front.jpeg";
-import hcPoolImage from "../../images/hc-pool.jpeg";
-import ccVillaImage from "../../images/cc-front.jpeg";
-import ccPoolImage from "../../images/cc-pool.jpeg";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Base from "@layouts/Base.astro";
+import Card from "@components/Card.astro";
+import hcVillaImage from "@images/hc-front.jpeg";
+import hcPoolImage from "@images/hc-pool.jpeg";
+import ccVillaImage from "@images/cc-front.jpeg";
+import ccPoolImage from "@images/cc-pool.jpeg";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.url);

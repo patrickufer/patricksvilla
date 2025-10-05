@@ -1,6 +1,6 @@
 ---
-import Base from "../../../layouts/Base.astro";
-import { Content } from "../../../content/hc-villa.md";
+import Base from "@layouts/Base.astro";
+import { Content } from "@content/hc-villa.md";
 
 export async function getStaticPaths() {
   return [{ params: { locale: "en" } }, { params: { locale: "de" } }];

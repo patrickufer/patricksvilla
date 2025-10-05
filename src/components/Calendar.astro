@@ -1,6 +1,6 @@
 ---
-import { bookings } from "../content/bookings.json";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { bookings } from "@content/bookings.json";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -87,7 +87,7 @@ allMonths.forEach((month) => {
                   </>
                 </div>
                 <div class="grid grid-cols-7 gap-1">
-                  {allCells.map((day, idx) => {
+                  {allCells.map((day) => {
                     if (day === null) return <span class="h-8 w-9" />;
                     const dateStr = formatDate(
                       month.getFullYear(),

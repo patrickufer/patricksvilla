@@ -1,13 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-export async function getStaticPaths() {
-  return [{ params: { locale: "en" } }, { params: { locale: "de" } }];
-}
 ---
 
 <nav class="pt-8 pb-8 flex justify-center">
