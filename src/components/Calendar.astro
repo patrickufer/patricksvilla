@@ -1,5 +1,5 @@
 ---
-import { availability } from "../content/availability.json";
+import { bookings } from "../content/bookings.json";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 // Helper to check if a date is within any unavailable range
 function isDateUnavailable(dateStr) {
   const date = new Date(dateStr);
-  return availability.some(({ start, end }) => {
+  return bookings.some(({ start, end }) => {
     const startDate = new Date(start);
     const endDate = new Date(end);
     return date >= startDate && date <= endDate;
