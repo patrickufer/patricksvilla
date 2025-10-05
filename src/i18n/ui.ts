@@ -38,7 +38,7 @@ export const ui = {
   },
   de: {
     "nav.availability": "Verfügbarkeit",
-    "nav.contact": "Kontaktieren Sie uns",
+    "nav.contact": "Kontakt",
     "nav.guestbook": "Gästebuch",
     "nav.title": "Willkommen bei ",
     "nav.subtitle": "Luxus-Ferienhäuser • Florida, USA",
